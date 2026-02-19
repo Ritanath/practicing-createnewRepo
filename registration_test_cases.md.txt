@@ -1,0 +1,78 @@
+Feature:
+1) User can register with:
+Email
+Password (minimum 8 character)
+
+
+Functional test case:-
+Test case:1
+Title: Verify user can register successfully with valid Email id and password
+Precondition: user should navigate to the registration page
+Test Steps:
+1. Enter a email id with valid domain
+Email id: tester@gmail.com
+2. enter password which includes atleast 8 characters
+Password: testing9
+3. click on registration button
+
+Expectde results: 
+User account should be created successfully
+User should be directed to dashboard
+Success message should be displayed
+
+Test case: 2
+Title: Verify user can register successfully when a special character is added in password
+Precondition: user should navigate to the registration page
+Test Steps:
+1. Enter a email id with valid domain
+Email id: tester@gmail.com
+2. enter password which includes atleast 8 characters with a special chanracter in it
+Password: testing#
+3. click on registration button
+
+Expectde results: 
+User account should be created successfully
+User should be directed to dashboard
+Success message should be displayed
+
+
+Negative test case:-
+Test case:3
+Title: Verify user gets an error message when @ is missing in Email ID
+Precondition: user should navigate to the registration page
+Test Steps:
+1. Enter a email id where @ is missing
+Email id: testergmail.com
+2. enter password which includes atleast 8 characters
+Password: testing9
+3. click on registration button
+
+Expectde results: User should receive a errorr message and registration should be unsuccessful
+
+Test case:4
+Title: Verify user gets an error message when adding a password which is less than 8 character
+Precondition: user should navigate to the registration page
+Test Steps:
+1. Enter a email id with valid domain
+Email id: tester@gmail.com
+2. enter password which includes only 5 character in it
+Password: testi
+3. click on registration button
+
+Expectde results: User should receive a errorr message and registration should be unsuccessful
+
+
+Edge case:-
+Test case:5
+Title: Verify registration works with exactly 8 characters password
+Test Steps:
+1. Enter a email id with valid domain
+Email id: tester@gmail.com
+2. enter password which includes only 8 character in it
+Password: testing9
+3. click on registration button
+
+Expectde results: 
+User account should be created successfully
+User should be directed to dashboard
+Success message should be displayed
